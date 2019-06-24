@@ -1,0 +1,5 @@
+FROM nginx
+
+COPY index.html /usr/share/nginx/html/index.html
+RUN sed -i /usr/share/nginx/html/index.html "s/PLACEHOLDER/Bar/g'
+RUN chmod +r /usr/share/nginx/html/index.html
